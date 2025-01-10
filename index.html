@@ -8,6 +8,7 @@
 </head>
 <body>
     <header>
+        <h1>Website Quản Lý Tài Chính</h1>
         <div class="login-signup">
             <button onclick="login()">Đăng Nhập</button>
             <button onclick="signup()">Đăng Ký</button>
@@ -15,7 +16,7 @@
         <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
     </header>
 
-    <nav id="menu" class="hidden">
+    <nav id="menu" class="hidden"> <!-- Thêm class 'hidden' để ẩn menu -->
         <ul>
             <li onclick="loadPage('nap')">Nạp</li>
             <li onclick="loadPage('rut')">Rút</li>

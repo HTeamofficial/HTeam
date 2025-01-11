@@ -5,31 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTeam Coin HTC</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        main {
+            margin-top: 20px; /* Tạo khoảng cách giữa tiêu đề và phần thông tin */
+        }
+        header {
+            cursor: pointer; /* Thêm con trỏ để hiển thị như thể nó có thể được nhấp vào */
+        }
+        .intro-text {
+            margin-top: 20px; /* Tạo khoảng cách cho đoạn văn bản giới thiệu */
+            font-size: 14px; /* Tùy chỉnh kích thước chữ */
+            text-align: center; /* Canh giữa văn bản */
+        }
+    </style>
 </head>
 <body>
-    <header>
+    <header onclick="reloadPage()">
         <h1>HTeam Coin HTC</h1>
-        <div class="login-signup">
-            <button onclick="login()">Đăng Nhập</button>
-            <button onclick="signup()">Đăng Ký</button>
-        </div>
-        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
     </header>
 
-    <nav id="menu" class="hidden"> <!-- Thêm class 'hidden' để ẩn menu -->
-        <ul>
-            <li onclick="loadPage('nap')">Nạp</li>
-            <li onclick="loadPage('rut')">Rút</li>
-            <li onclick="loadPage('lam_nhiem_vu')">Làm Nhiệm Vụ</li>
-            <li onclick="loadPage('may_dao_coin')">Máy Đào Coin</li>
-        </ul>
-    </nav>
+    <div class="login-signup">
+        <button onclick="login()">Đăng Nhập</button>
+        <button onclick="signup()">Đăng Ký</button>
+    </div>
 
     <main>
         <h1>Số Dư HTC: <span id="balance">0</span></h1>
         <h1>Đóng Băng: <span id="frozen">0</span></h1>
+        
+        <div class="intro-text">
+            <p>HTeam 2021©</p>
+            <p>Admin Nguyễn Việt Hùng</p>
+            <p>Đây là trang web cung cấp dịch vụ tài chính của HTeam được design bởi HTeam.</p>
+        </div>
     </main>
 
-    <script src="script.js"></script>
+    <script>
+        function reloadPage() {
+            location.reload(); // Tải lại trang
+        }
+
+        function login() {
+            // Logic đăng nhập
+        }
+
+        function signup() {
+            // Logic đăng ký
+        }
+    </script>
 </body>
 </html>

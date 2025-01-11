@@ -1,23 +1,17 @@
-let isMenuOpen = false;
-
-function toggleMenu() {
-    const menu = document.getElementById('menu');
-    isMenuOpen = !isMenuOpen;
-    menu.classList.toggle('visible', isMenuOpen); // Sử dụng 'visible' để hiển thị menu
-}
-
-function loadPage(page) {
-    alert('Chuyển đến trang: ' + page);
+function reloadPage() {
+    location.reload(); // Tải lại trang
 }
 
 function login() {
-    alert('Chức năng đăng nhập đang được phát triển!');
+    // Logic đăng nhập
+    alert("Chức năng đăng nhập chưa được cài đặt!");
 }
 
 function signup() {
-    alert('Chức năng đăng ký đang được phát triển!');
+    // Logic đăng ký
+    alert("Chức năng đăng ký chưa được cài đặt!");
 }
 
-// Giả lập dữ liệu số dư
-document.getElementById('balance').innerText = 100; // Số dư HTC
-document.getElementById('frozen').innerText = 50; // Đóng băng
+// Giả lập số dư để hiển thị
+document.getElementById('balance').innerText = (Math.random() * 1000).toFixed(2);
+document.getElementById('frozen').innerText = (Math.random() * 500).toFixed(2);
